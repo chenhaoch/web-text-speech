@@ -1,0 +1,43 @@
+const fs = require('fs');
+
+// Create simple SVG icons and convert to PNG-like data
+// For a real extension, you'd use actual PNG files
+
+// Simple 16x16 icon as base64 PNG (blue speaker icon)
+const icon16 = Buffer.from(
+  'iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB' +
+  'OElEQVR4nGNgGAWjYBSMglEwCkbBKBgFo2AUjIJRMApGwSgYBaNgFIyCUTAKRsEoGAWjYBSMglEwCk' +
+  'bBKBgFo2AUjIJRMApGwSgYBaNgFIyCUTAKRsEoGAWjYBSMglEwCkbBKBgFo2AUjIJRMApGwSgYBaNg' +
+  'FIyCUTAKRsEoGAWjYBSMglEwCkbBKBgFo2AUjIJRMApGwSgYBaNgFIyCUTAKRsEoGAWjYBSMglEwCk' +
+  'bBKBgFo2AUjIJRMApGwSgYBaNgFAAA3hIN/0v+J/kAAAAASUVORK5CYII=',
+  'base64'
+);
+
+// Simple 48x48 icon
+const icon48 = Buffer.from(
+  'iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB' +
+  'OklEQVR4nGNgGAWjYBSMglEwCkbBKBgFo2AUjIJRMApGwSgYBaNgFIyCUTAKRsEoGAWjYBSMglEwCk' +
+  'bBKBgFo2AUjIJRMApGwSgYBaNgFIyCUTAKRsEoGAWjYBSMglEwCkbBKBgFo2AUjIJRMApGwSgYBaNg' +
+  'FIyCUTAKRsEoGAWjYBSMglEwCkbBKBgFo2AUjIJRMApGwSgYBaNgFIyCUTAKRsEoGAWjYBSMglEwCk' +
+  'bBKBgFo2AUjIJRMApGwSgYBaNgFIyCUTAKRsEoGAWjYBSMglEwCkbBKBgFo2AUjIJRMApGwSgYBaNg' +
+  'FIyCUTAKRsEoGAWjYBSMglEwCkbBKBgFo2AUjIJRMApGwSgYBaNgFAAA3hIN/0v+J/kAAAAASUVORK5CYII=',
+  'base64'
+);
+
+// Simple 128x128 icon
+const icon128 = Buffer.from(
+  'iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB' +
+  'OklEQVR4nGNgGAWjYBSMglEwCkbBKBgFo2AUjIJRMApGwSgYBaNgFIyCUTAKRsEoGAWjYBSMglEwCk' +
+  'bBKBgFo2AUjIJRMApGwSgYBaNgFIyCUTAKRsEoGAWjYBSMglEwCkbBKBgFo2AUjIJRMApGwSgYBaNg' +
+  'FIyCUTAKRsEoGAWjYBSMglEwCkbBKBgFo2AUjIJRMApGwSgYBaNgFIyCUTAKRsEoGAWjYBSMglEwCk' +
+  'bBKBgFo2AUjIJRMApGwSgYBaNgFIyCUTAKRsEoGAWjYBSMglEwCkbBKBgFo2AUjIJRMApGwSgYBaNg' +
+  'FIyCUTAKRsEoGAWjYBSMglEwCkbBKBgFo2AUjIJRMApGwSgYBaNgFIyCUTAKRsEoGAWjYBSMglEwCk' +
+  'bBKBgFo2AUjIJRMApGwSgYBaNgFAAA3hIN/0v+J/kAAAAASUVORK5CYII=',
+  'base64'
+);
+
+fs.writeFileSync('icon16.png', icon16);
+fs.writeFileSync('icon48.png', icon48);
+fs.writeFileSync('icon128.png', icon128);
+
+console.log('Icons created successfully!');
