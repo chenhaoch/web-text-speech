@@ -5,45 +5,47 @@ node_modules/
 # Build artifacts
 dist/
 build/
-*.o
-*.obj
-*.out
+target/
 
 # Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.py.class
+*.py.obj
 .Python
-*.so
-*.egg-info/
-.eggs/
-.coverage
-coverage/
-htmlcov/
-.pytest_cache/
-.mypy_cache/
-
-# Logs and temp files
-*.log
-*.tmp
-*.swp
-*.swo
-
-# Environment variables
+env/
+venv/
+.venv/
 .env
 .env.local
 .env.*
 
-# Editors
+# Logs
+*.log
+
+# Coverage
+.coverage
+coverage/
+htmlcov/
+
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*.tmp
 
-# OS generated files
+# OS
 .DS_Store
 Thumbs.db
+
+# Testing
+.mypy_cache/
+.pytest_cache/
+.nyc_output/
+coverage/
 
 # Compression
 *.zip
